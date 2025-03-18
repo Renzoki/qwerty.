@@ -4,25 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.css">
-    <link rel="stylesheet" href="../Styles/base.css">
+    <link rel="stylesheet" href="../Styles/styles.css">
     <title>Keyboard Tracker</title>
 </head>
 
 <body>
-    <div class="section">
-        <div class="grid is-col-min-1">
-            <div class="cell">
-                <div id="a" class="box has-text-centered is-gray">a</div>
+    <div id="container" class="is-flex"> <!-- main container -->
+        <section id="keyboard-container">
+            <div id="top-row" class="is-flex">
+                <div id="Escape" class="key">esc</div>
+                <div class="funcKeys-container is-flex">
+                    <div class="key" id="F1">F1</div>
+                    <div class="key" id="F2">F2</div>
+                    <div class="key" id="F3">F3</div>
+                    <div class="key" id="F4">F4</div>
+                </div>
+                <div class="funcKeys-container is-flex">
+                    <div class="key" id="F5">F5</div>
+                    <div class="key" id="F6">F6</div>
+                    <div class="key" id="F7">F7</div>
+                    <div class="key" id="F8">F8</div>
+                </div>
+                <div class="funcKeys-container is-flex">
+                    <div class="key" id="F9">F9</div>
+                    <div class="key" id="F10">F10</div>
+                    <div class="key" id="F11">F11</div>
+                    <div class="key" id="F12">F12</div>
+                </div>
+                <div class="sysConKeys-container is-flex">
+                    <div class="key" id="PrintScreen">print/scr</div>
+                    <div class="key" id="ScrollLock">scroll lock</div>
+                    <div class="key" id="Pause">pause break</div>
+                </div>
             </div>
-            <div class="cell">
-                <div id="b" class="box has-text-centered is-gray">b</div>
+
+            <div id="bottom-container" class="is-flex">
+                <div id="left-container">
+                    <div class="row is-flex">
+                        <div class="key" id="Backquote">~</div>
+                        <div class="key" id="Digit1">1</div>
+                        <div class="key" id="Digit2">2</div>
+                        <div class="key" id="Digit3">3</div>
+                        <div class="key" id="Digit4">4</div>
+                        <div class="key" id="Digit5">5</div>
+                        <div class="key" id="Digit6">6</div>
+                        <div class="key" id="Digit7">7</div>
+                        <div class="key" id="Digit8">8</div>
+                        <div class="key" id="Digit9">9</div>
+                        <div class="key" id="Digit0">0</div>
+                        <div class="key" id="Minus">-</div>
+                        <div class="key" id="Equal">=</div>
+                        <div class="key" id="Backspace">del</div>
+                    </div>
+                    <div class="row">
+
+                    </div>
+                    <div class="row">
+
+                    </div>
+                    <div class="row">
+
+                    </div>
+                    <div class="row">
+
+                    </div>
+                </div>
+                <div id="navKeys-container">
+
+                </div>
+                <div id="right-container">
+
+                </div>
             </div>
-            <div class="cell">
-                <div id="c" class="box has-text-centered is-gray">c</div>
-            </div>
-        </div>
+        </section>
     </div>
+
+    <!-- Format:
+        id = a, b, c, etc    
+    -->
 </body>
 
 <script src="../Scripts/keydown.js"></script>

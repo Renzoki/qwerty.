@@ -1,3 +1,10 @@
+:root {
+    --keyBorderColor: #FFCA85;
+    --backgroundColor: #2A2D34;
+    --keyPressColor: #FF9F1C;
+    font-family: basic;
+}
+
 body {
     margin: 0;
 }
@@ -6,28 +13,33 @@ body {
     display: flex;
 }
 
+.is-column {
+    flex-direction: column;
+}
+
 #container {
     width: 100vw;
     height: 100vh;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #dad7cd;
+    background-color: var(--backgroundColor);
 }
 
 #keyboard-container {
-    width: 85%;
-    height: 55%;
-    padding: 1em;
+    width: 1300px;
+    height: 380px;
+    padding: 15px;
+    padding-left: 20px;
+    border-radius: 1em;
     box-sizing: border-box;
-    background-color: blanchedalmond;
+    border: 2px solid var(--keyBorderColor);
+    justify-content: space-evenly;
 }
 
 /* top row containers */
 #top-row {
-    width: 81%;
+    width: 79.6%;
     height: 15%;
-    background-color: navajowhite;
 }
 
 .funcKeys-container {
@@ -37,33 +49,107 @@ body {
 }
 
 .sysConKeys-container {
-    width: 11em;
+    width: 11.4em;
     justify-content: space-around;
-    margin-left: 2em;
+    margin-left: 1em;
 }
 
 /* bottom half containers */
 #bottom-container {
     width: 100%;
-    height: 85%;
+    height: 80%;
 }
 
 #left-container {
     width: 66%;
     height: 100%;
-    background-color: chartreuse;
+    justify-content: space-evenly;
+}
+
+/* left Container Key Sizes*/
+
+#Backspace,
+#Tab,
+#ControlLeft,
+#ControlRight {
+    width: 3.9em;
+}
+
+#CapsLock,
+#Enter {
+    width: 5.45em;
+}
+
+#ShiftLeft,
+#ShiftRight {
+    width: 7.4em;
+}
+
+#Space {
+    width: 25.6em;
 }
 
 #navKeys-container {
-    width: 15.3%;
+    gap: .9em;
+    width: 16.8%;
     height: 100%;
-    background-color: cadetblue;
+    margin-left: 10px;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: .41em .7em;
+    box-sizing: border-box;
 }
 
+.navKeys,
+.arrowKeys {
+    width: 100%;
+}
+
+.navKeys .row,
+.arrowKeys .row {
+    margin-bottom: 7px;
+    justify-content: center;
+}
+
+.arrowKeys {
+    margin-top: 3px;
+}
+
+.arrowKeys .row2 {
+    margin-bottom: 2px;
+}
+
+
+
+/* Middle Container Key Sizes*/
+
 #right-container {
-    width: 19%;
+    width: 19.5%;
     height: 100%;
-    background-color: aquamarine;
+    padding-left: 20px;
+}
+
+.numberKeys {
+    justify-content: space-evenly;
+}
+
+.operationKeys {
+    margin-top: 7.5px;
+    margin-left: 9.8px;
+}
+
+#Numpad0 {
+    width: 6.35em;
+}
+
+#NumpadAdd,
+#NumpadEnter {
+    margin-top: 8.5px;
+    height: 6.18em;
+}
+
+.is-column {
+    flex-direction: column;
 }
 
 .row {
@@ -71,10 +157,12 @@ body {
 }
 
 .key {
-    width: 2.8em;
-    height: 2.8em;
-    background-color: mediumpurple;
-    border: 1px solid black;
+    width: 3rem;
+    height: 2.8rem;
+    font-size: 15px;
+    color: var(--keyBorderColor);
+    box-sizing: border-box;
+    border: 2px solid var(--keyBorderColor);
     border-radius: .4em;
 
     display: flex;
@@ -82,14 +170,11 @@ body {
     align-items: center;
 
     text-align: center;
+    transition: background-color .1s ease-in-out, transform .1s ease-in-out;
 }
 
-/* Specific Key Sizes*/
-
-#Backspace {
-    width: 3.9em;
-}
 
 .is-pressed {
-    background-color: mediumaquamarine;
+    background-color: var(--keyPressColor);
+    transform: translateY(3px);
 }

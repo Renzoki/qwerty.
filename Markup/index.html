@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Basic&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../Styles/styles.css">
     <title>Keyboard Tracker</title>
 </head>
 
 <body>
-    <div id="container" class="is-flex"> <!-- main container -->
-        <section id="keyboard-container">
+    <div id="container" class="is-flex is-column"> <!-- main container -->
+        <section id="keyboard-container" class="is-flex is-column">
             <div id="top-row" class="is-flex">
                 <div id="Escape" class="key">esc</div>
                 <div class="funcKeys-container is-flex">
@@ -39,7 +42,7 @@
             </div>
 
             <div id="bottom-container" class="is-flex">
-                <div id="left-container">
+                <div id="left-container" class="is-flex is-column">
                     <div class="row is-flex">
                         <div class="key" id="Backquote">~</div>
                         <div class="key" id="Digit1">1</div>
@@ -56,24 +59,120 @@
                         <div class="key" id="Equal">=</div>
                         <div class="key" id="Backspace">del</div>
                     </div>
-                    <div class="row">
-
+                    <div class="row is-flex">
+                        <div class="key" id="Tab">Tab</div>
+                        <div class="key" id="KeyQ">Q</div>
+                        <div class="key" id="KeyW">W</div>
+                        <div class="key" id="KeyE">E</div>
+                        <div class="key" id="KeyR">R</div>
+                        <div class="key" id="KeyT">T</div>
+                        <div class="key" id="KeyY">Y</div>
+                        <div class="key" id="KeyU">U</div>
+                        <div class="key" id="KeyI">I</div>
+                        <div class="key" id="KeyO">O</div>
+                        <div class="key" id="KeyP">P</div>
+                        <div class="key" id="BracketLeft">[</div>
+                        <div class="key" id="BracketRight">]</div>
+                        <div class="key" id="Backslash">\</div>
                     </div>
-                    <div class="row">
-
+                    <div class="row is-flex">
+                        <div class="key" id="CapsLock">CapsLock</div>
+                        <div class="key" id="KeyA">A</div>
+                        <div class="key" id="KeyS">S</div>
+                        <div class="key" id="KeyD">D</div>
+                        <div class="key" id="KeyF">F</div>
+                        <div class="key" id="KeyG">G</div>
+                        <div class="key" id="KeyH">H</div>
+                        <div class="key" id="KeyJ">J</div>
+                        <div class="key" id="KeyK">K</div>
+                        <div class="key" id="KeyL">L</div>
+                        <div class="key" id="Semicolon">;</div>
+                        <div class="key" id="Quote">'</div>
+                        <div class="key" id="Enter">Enter</div>
                     </div>
-                    <div class="row">
-
+                    <div class="row is-flex">
+                        <div class="key" id="ShiftLeft">Shift</div>
+                        <div class="key" id="KeyZ">Z</div>
+                        <div class="key" id="KeyX">X</div>
+                        <div class="key" id="KeyC">C</div>
+                        <div class="key" id="KeyV">V</div>
+                        <div class="key" id="KeyB">B</div>
+                        <div class="key" id="KeyN">N</div>
+                        <div class="key" id="KeyM">M</div>
+                        <div class="key" id="Comma">,</div>
+                        <div class="key" id="Period">.</div>
+                        <div class="key" id="Slash">/</div>
+                        <div class="key" id="ShiftRight">Shift</div>
                     </div>
-                    <div class="row">
-
+                    <div class="row is-flex">
+                        <div class="key" id="ControlLeft">Ctrl</div>
+                        <div class="key" id="MetaLeft">Win</div>
+                        <div class="key" id="AltLeft">Alt</div>
+                        <div class="key" id="Space">Space</div>
+                        <div class="key" id="AltRight">Alt</div>
+                        <div class="key" id="MetaRight">Win</div>
+                        <div class="key" id="ContextMenu">Menu</div>
+                        <div class="key" id="ControlRight">Ctrl</div>
                     </div>
                 </div>
-                <div id="navKeys-container">
-
+                <div id="navKeys-container" class="is-flex is-column">
+                    <div class="navKeys is-flex is-column">
+                        <div class="row is-flex">
+                            <div class="key" id="Insert">insert</div>
+                            <div class="key" id="Home">home</div>
+                            <div class="key" id="PageUp">page up</div>
+                        </div>
+                        <div class="row is-flex">
+                            <div class="key" id="Delete">delete</div>
+                            <div class="key" id="End">end</div>
+                            <div class="key" id="PageDown">page down</div>
+                        </div>
+                    </div>
+                    <div class="arrowKeys is-column">
+                        <div class="row is-flex row1">
+                            <div class="key" id="ArrowUp">&uarr;</div>
+                        </div>
+                        <div class="row is-flex row2">
+                            <div class="key" id="ArrowLeft">&larr;</div>
+                            <div class="key" id="ArrowDown">&darr;</div>
+                            <div class="key" id="ArrowRight">&rarr;</div>
+                        </div>
+                    </div>
                 </div>
-                <div id="right-container">
-
+                <div id="right-container" class="is-flex">
+                    <div class="numberKeys is-flex is-column">
+                        <div class="row is-flex">
+                            <div class="key" id="NumLock">num lock</div>
+                            <div class="key" id="NumpadDivide">/</div>
+                            <div class="key" id="NumpadMultiply">*</div>
+                        </div>
+                        <div class="row is-flex">
+                            <div class="key" id="Numpad7">7</div>
+                            <div class="key" id="Numpad8">8</div>
+                            <div class="key" id="Numpad9">9</div>
+                        </div>
+                        <div class="row is-flex">
+                            <div class="key" id="Numpad4">4</div>
+                            <div class="key" id="Numpad5">5</div>
+                            <div class="key" id="Numpad6">6</div>
+                        </div>
+                        <div class="row is-flex">
+                            <div class="key" id="Numpad1">1</div>
+                            <div class="key" id="Numpad2">2</div>
+                            <div class="key" id="Numpad3">3</div>
+                        </div>
+                        <div class="row is-flex">
+                            <div class="key" id="Numpad0">0</div>
+                            <div class="key" id="NumpadDecimal">.</div>
+                        </div>
+                    </div>
+                    <div class="operationKeys">
+                        <div class="is-column is-flex">
+                            <div class="key" id="NumpadSubtract">-</div>
+                            <div class="key" id="NumpadAdd">+</div>
+                            <div class="key" id="NumpadEnter">enter</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

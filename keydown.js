@@ -70,6 +70,7 @@ const keyIDs = [
 
 class keyObject {
     constructor(code) {
+        this.works = false
         this.code = code
         this.element = document.querySelector(`#${this.code}`);
     }
@@ -79,11 +80,15 @@ const keyObjectArr = keyIDs.map((obj) => {
     return new keyObject(obj.code)
 })
 
+function listWorkingKey(obj) {
+    obj.works = true
+}
+
 function generateKeyListeners(objArr) {
     objArr.forEach(obj => {
         body.addEventListener("keydown", (e) => {
             if (e.code === obj.code) {
-                console.log(obj)
+                listWorkingKey(obj)
                 obj.element.classList.add("is-pressed")
             }
         })

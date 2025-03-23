@@ -1,8 +1,8 @@
 :root {
-    --keyBorderColor: #FFCA85;
-    --backgroundColor: #2A2D34;
-    --keyPressColor: #FF9F1C;
-    font-family: basic;
+    --keyBorderColor: #393e41;
+    --backgroundColor: #f6f7eb;
+    --keyPressColor: #e94f37;
+    --keyWorksColor: #8338ec;
 }
 
 body {
@@ -25,15 +25,26 @@ body {
     background-color: var(--backgroundColor);
 }
 
+#title {
+    color: var(--keyBorderColor);
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Martian Mono;
+    position: absolute;
+    margin-bottom: 650px;
+}
+
 #keyboard-container {
     width: 1300px;
     height: 380px;
     padding: 15px;
+    font-family: basic;
     padding-left: 20px;
     border-radius: 1em;
     box-sizing: border-box;
     border: 2px solid var(--keyBorderColor);
     justify-content: space-evenly;
+    box-shadow: 5px 5px var(--keyBorderColor);
 }
 
 /* top row containers */
@@ -170,11 +181,15 @@ body {
     align-items: center;
 
     text-align: center;
-    transition: background-color .1s ease-in-out, transform .1s ease-in-out;
+    transition: background-color .09s ease-in-out, transform .1s ease-in-out;
 }
 
 
 .is-pressed {
     background-color: var(--keyPressColor);
     transform: translateY(3px);
+}
+
+.works {
+    background-color: var(--keyWorksColor);
 }

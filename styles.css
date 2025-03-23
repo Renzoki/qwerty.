@@ -32,6 +32,7 @@ body {
     font-family: Martian Mono;
     position: absolute;
     margin-bottom: 650px;
+    animation: 1s ease-out 0s 1 becomeClear;
 }
 
 #keyboard-container {
@@ -42,9 +43,10 @@ body {
     padding-left: 20px;
     border-radius: 1em;
     box-sizing: border-box;
-    border: 2px solid var(--keyBorderColor);
     justify-content: space-evenly;
+    border: 2px solid var(--keyBorderColor);
     box-shadow: 5px 5px var(--keyBorderColor);
+    animation: 1s ease-out 0s 1 becomeClear;
 }
 
 /* top row containers */
@@ -192,4 +194,15 @@ body {
 
 .works {
     background-color: var(--keyWorksColor);
+}
+
+/* Transition */
+@keyframes becomeClear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

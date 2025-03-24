@@ -141,3 +141,4 @@ function animationController() {
 }
 
 animationController()
+console.warn("WHY IS IT NOT WORKING")

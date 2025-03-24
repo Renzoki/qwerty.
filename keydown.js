@@ -106,7 +106,7 @@ function generateKeyListeners(objArr) {
 
 generateKeyListeners(keyObjectArr)
 
-async function titleAnimation() {
+function titleAnimation() {
     const titleChar = ["q", "w", "e", "r", "t", "y", "."]
 
     let i = 0
@@ -122,7 +122,7 @@ async function titleAnimation() {
     return
 }
 
-async function cursorAnimation() {
+function cursorAnimation() {
     let i = 0
     setInterval(() => {
         i++
@@ -135,9 +135,9 @@ async function cursorAnimation() {
 }
 
 
-async function animationController() {
+function animationController() {
     titleAnimation()
-        .then(cursorAnimation())
+    cursorAnimation()
 }
 
 animationController()

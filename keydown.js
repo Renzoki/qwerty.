@@ -1,4 +1,8 @@
 const body = document.querySelector("body")
+const titleContainer = document.querySelector("#titleContainer")
+const title = document.querySelector("#title")
+const tabTitle = document.querySelector("title")
+const textCursor = document.querySelector("#textCursor")
 
 const keyIDs = [
     { code: "Escape", label: "esc" },
@@ -101,3 +105,39 @@ function generateKeyListeners(objArr) {
 }
 
 generateKeyListeners(keyObjectArr)
+
+async function titleAnimation() {
+    const titleChar = ["q", "w", "e", "r", "t", "y", "."]
+
+    let i = 0
+    const intervalID = setInterval(() => {
+        title.textContent += titleChar[i]
+        tabTitle.textContent += titleChar[i]
+        i++
+    }, 200)
+
+    setTimeout(() => {
+        clearInterval(intervalID)
+    }, 1500)
+    return
+}
+
+async function cursorAnimation() {
+    let i = 0
+    setInterval(() => {
+        i++
+        if (i % 2)
+            textCursor.textContent = "_"
+        else
+            textCursor.textContent = ""
+    }, 500)
+    return
+}
+
+
+async function animationController() {
+    titleAnimation()
+        .then(cursorAnimation())
+}
+
+animationController()

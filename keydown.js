@@ -1,8 +1,12 @@
 const body = document.querySelector("body")
-const titleContainer = document.querySelector("#titleContainer")
 const title = document.querySelector("#title")
-const tabTitle = document.querySelector("title")
 const textCursor = document.querySelector("#textCursor")
+
+const titleKeys = "qwerty."
+const darkModeInstructions = 'Type "dark" to enable dark mode'
+const lightModeInstructions = 'Type "light" to enable light mode'
+
+let characterQueue = ""
 
 const keyIDs = [
     { code: "Escape", label: "esc" },
@@ -74,7 +78,6 @@ const keyIDs = [
 
 class keyObject {
     constructor(code) {
-        this.works = false
         this.code = code
         this.element = document.querySelector(`#${this.code}`);
     }
@@ -84,42 +87,61 @@ const keyObjectArr = keyIDs.map((obj) => {
     return new keyObject(obj.code)
 })
 
-function listWorkingKey(obj) {
-    obj.works = true
-}
-
 function generateKeyListeners(objArr) {
     objArr.forEach(obj => {
         body.addEventListener("keydown", (e) => {
             if (e.code === obj.code) {
-                listWorkingKey(obj)
                 obj.element.classList.add("is-pressed")
             }
         })
 
         body.addEventListener("keyup", (e) => {
-            if (e.code === obj.code)
+            if (e.code === obj.code) {
                 obj.element.classList.remove("is-pressed")
+                enqueueCharacter(e.key[0])
+            }
         })
     });
 }
 
-generateKeyListeners(keyObjectArr)
+//character queue 
+function enqueueCharacter(char) {
+    characterQueue = characterQueue + char
+    console.log(characterQueue)
+    characterQueue.toLowerCase()
 
-function titleAnimation() {
-    const titleChar = ["q", "w", "e", "r", "t", "y", "."]
+    checkThemeChange(characterQueue)
+}
 
+//check for theme change
+function checkThemeChange(charArr) {
+    if (charArr.indexOf("light") !== -1) {
+        document.documentElement.style.setProperty("--keyBorderColor", "#393e41")
+        document.documentElement.style.setProperty("--backgroundColor", "#f6f7eb")
+        document.documentElement.style.setProperty("--keyPressColor", "#e94f37")
+        characterQueue = ""
+    } else if (charArr.indexOf("dark") !== -1) {
+        document.documentElement.style.setProperty("--keyBorderColor", "#f8f7f9")
+        document.documentElement.style.setProperty("--backgroundColor", "#151515")
+        document.documentElement.style.setProperty("--keyPressColor", "#f2af29")
+        characterQueue = ""
+    }
+}
+
+//title animation
+function typeAnimation(displayString) {
+    const displayChar = [...displayString]
+    const totalTime = (displayChar.length * 150) + 150
     let i = 0
+
     const intervalID = setInterval(() => {
-        title.textContent += titleChar[i]
-        tabTitle.textContent += titleChar[i]
+        title.textContent += displayChar[i]
         i++
-    }, 200)
+    }, 150)
 
     setTimeout(() => {
         clearInterval(intervalID)
-    }, 1500)
-    return
+    }, totalTime)
 }
 
 function cursorAnimation() {
@@ -131,13 +153,8 @@ function cursorAnimation() {
         else
             textCursor.textContent = ""
     }, 500)
-    return
 }
 
-
-function animationController() {
-    titleAnimation()
-    cursorAnimation()
-}
-
-animationController()
+generateKeyListeners(keyObjectArr)
+typeAnimation(titleKeys)
+cursorAnimation()

@@ -2,8 +2,8 @@
     --keyBorderColor: #393e41;
     --backgroundColor: #f6f7eb;
     --keyPressColor: #e94f37;
-    --keyWorksColor: #8338ec;
 }
+
 
 body {
     margin: 0;
@@ -22,6 +22,7 @@ body {
     height: 100vh;
     align-items: center;
     justify-content: center;
+    transition: .4s ease-in-out;
     background-color: var(--backgroundColor);
 }
 

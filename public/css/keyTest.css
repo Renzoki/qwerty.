@@ -1,0 +1,241 @@
+:root {
+    --keyBorderColor: #393e41;
+    --backgroundColor: #f6f7eb;
+    --keyPressColor: #e94f37;
+}
+
+body {
+    margin: 0;
+}
+
+.is-flex {
+    display: flex;
+}
+
+.is-column {
+    flex-direction: column;
+}
+
+.navbar {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; 
+    width: 1300px;
+    height: 30px;
+    margin-top: 30px;
+    font-family: basic;
+    font-size: 1em;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: 1s ease-out 0s 1 becomeClear;
+
+    color: rgb(112, 106, 106);
+    text-decoration: none;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: .4s ease-in-out;
+    background-color: var(--backgroundColor);
+}
+
+#titleContainer {
+    color: var(--keyBorderColor);
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Martian Mono;
+    position: absolute;
+    width: 9em;
+    margin-bottom: 650px;
+    animation: 1s ease-out 0s 1 becomeClear;
+    justify-content: flex-start;
+}
+
+#keyboard-container {
+    width: 1300px;
+    height: 380px;
+    padding: 15px;
+    font-family: basic;
+    padding-left: 20px;
+    border-radius: 1em;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    border: 2px solid var(--keyBorderColor);
+    box-shadow: 5px 5px var(--keyBorderColor);
+    animation: 1s ease-out 0s 1 becomeClear;
+}
+
+/* top row containers */
+#top-row {
+    width: 79.6%;
+    height: 15%;
+}
+
+.funcKeys-container {
+    width: 15em;
+    justify-content: space-around;
+    margin-left: 2em;
+}
+
+.sysConKeys-container {
+    width: 11.4em;
+    justify-content: space-around;
+    margin-left: 1em;
+}
+
+/* bottom half containers */
+#bottom-container {
+    width: 100%;
+    height: 80%;
+}
+
+#left-container {
+    width: 66%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+/* left Container Key Sizes*/
+
+#Backspace,
+#Tab,
+#ControlLeft,
+#ControlRight {
+    width: 3.9em;
+}
+
+#CapsLock,
+#Enter {
+    width: 5.45em;
+}
+
+#ShiftLeft,
+#ShiftRight {
+    width: 7.4em;
+}
+
+#Space {
+    width: 25.6em;
+}
+
+#navKeys-container {
+    gap: .9em;
+    width: 16.8%;
+    height: 100%;
+    margin-left: 10px;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: .5em .7em;
+    box-sizing: border-box;
+}
+
+.navKeys,
+.arrowKeys {
+    width: 100%;
+}
+
+.navKeys .row,
+.arrowKeys .row {
+    margin-bottom: 7px;
+    justify-content: center;
+}
+
+.arrowKeys {
+    margin-top: 1px;
+}
+
+.arrowKeys .row2 {
+    margin-bottom: 2px;
+}
+
+/* Middle Container Key Sizes*/
+
+#right-container {
+    width: 19.5%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.numberKeys {
+    justify-content: space-evenly;
+}
+
+.operationKeys {
+    margin-top: 7.5px;
+    margin-left: 9.8px;
+}
+
+#Numpad0 {
+    width: 6.35em;
+}
+
+#NumpadAdd,
+#NumpadEnter {
+    margin-top: 8.5px;
+    height: 6.18em;
+}
+
+.spacing-div {
+    height: 4em;
+}
+
+.is-column {
+    flex-direction: column;
+}
+
+.row {
+    gap: 10px;
+}
+
+.key {
+    width: 3rem;
+    height: 2.8rem;
+    font-size: 15px;
+    color: var(--keyBorderColor);
+    box-sizing: border-box;
+    border: 2px solid var(--keyBorderColor);
+    border-radius: .4em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    transition: background-color .09s ease-in-out, transform .1s ease-in-out;
+}
+
+
+.is-pressed {
+    background-color: var(--keyPressColor);
+    transform: translateY(3px);
+}
+
+.works {
+    background-color: var(--keyWorksColor);
+}
+
+/* Transition */
+@keyframes becomeClear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

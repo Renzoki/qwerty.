@@ -1,0 +1,24 @@
+{
+  "name": "keyboard-tracker",
+  "version": "1.0.0",
+  "description": "Type \"dark\"/\"light\" to change themes :D",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Renzoki/qwerty..git"
+  },
+  "author": "Renz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Renzoki/qwerty./issues"
+  },
+  "homepage": "https://github.com/Renzoki/qwerty.#readme",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

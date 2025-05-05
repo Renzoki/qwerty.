@@ -8,76 +8,99 @@ body {
     margin: 0;
 }
 
-.is-flex {
-    display: flex;
-}
-
-.is-column {
-    flex-direction: column;
-}
-
-.navbar {
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; 
-    width: 1300px;
-    height: 30px;
-    margin-top: 30px;
-    font-family: basic;
-    font-size: 1em;
-    justify-content: space-evenly;
-    align-items: center;
-    animation: 1s ease-out 0s 1 becomeClear;
-
-    color: rgb(112, 106, 106);
-    text-decoration: none;
-    font-size: 1.3em;
-    letter-spacing: 2px;
-}
-
-.nav-links {
-    width: 40%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.navbar-link {
-    color: inherit;
-    text-decoration: inherit;
-}
-
 #container {
     width: 100vw;
     height: 100vh;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     transition: .4s ease-in-out;
     background-color: var(--backgroundColor);
+    overflow: auto;
 }
 
-#titleContainer {
+.background-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-repeat: repeat;
+    background-image: url(../assets/grid-background.png);
+    opacity: 0.15;
+}
+
+#title-container {
+    width: 1300px;
     color: var(--keyBorderColor);
-    font-size: 1.5em;
+    font-size: 5em;
     font-weight: bold;
     font-family: Martian Mono;
-    position: absolute;
-    width: 9em;
-    margin-bottom: 650px;
     animation: 1s ease-out 0s 1 becomeClear;
     justify-content: flex-start;
+    z-index: 0;
+    text-align: start;
+    z-index: 10;
+    letter-spacing: -3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#title-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#title-container p {
+    margin: 0;
+}
+
+#title-container .sub {
+    font-size: .3em;
+    margin-top: .5em;
+    font-weight: normal;
+}
+
+#title-container .side-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 120%;
+}
+
+.game-button, .github-button {
+    width: 6.5em;
+    font-size: .4em;
+    border: 2px solid var(--keyBorderColor);
+    box-shadow: 5px 5px var(--keyBorderColor);
+    background-color: var(--backgroundColor);
+    text-align: center;
+    padding: .2em 0;
+    border-radius: .2em;
+    transition: .3s transform ease-in-out;
+}
+
+.github-button {
+    width: 7em;
+}
+
+.link-button:hover {
+    transform: translateY(-5px);
 }
 
 #keyboard-container {
     width: 1300px;
     height: 380px;
     padding: 15px;
+    border-radius: 1em;
     font-family: basic;
     padding-left: 20px;
-    border-radius: 1em;
+    margin-top: 3em;
     box-sizing: border-box;
     justify-content: space-evenly;
     border: 2px solid var(--keyBorderColor);
-    box-shadow: 5px 5px var(--keyBorderColor);
+    box-shadow: 5px 7px var(--keyBorderColor);
+    background-color: var(--backgroundColor);
     animation: 1s ease-out 0s 1 becomeClear;
+    z-index: 1;
 }
 
 /* top row containers */
@@ -196,6 +219,10 @@ body {
 
 .is-column {
     flex-direction: column;
+}
+
+.is-flex {
+    display: flex;
 }
 
 .row {

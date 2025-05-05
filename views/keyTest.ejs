@@ -8,192 +8,36 @@
         href="https://fonts.googleapis.com/css2?family=Basic&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/keyTest.css">
+    <link rel="stylesheet" href="/css/keyTest.css">
     <title>qwerty.</title>
 </head>
 
 <body>
-    <div id="container" class="is-flex"> <!-- main container -->
-        <div class="navbar is-flex">
-            <div class="page-name">
-                <a href="">QWERTY</a>
+    <div id="container" class="is-flex is-column"> <!-- main container -->
+        <section id="title-container">
+            <div class="title">
+                <p>Keyboard Tracker</p>
+                <p class="sub">A mini project by <a href="https://github.com/Renzoki">Renz</a></p>
             </div>
-            <div class="nav-links">
-                <a href="" class="navbar-link">Home</a> |
-                <a href="" class="navbar-link">Keyboard Tester</a> |
-                <a href="" class="navbar-link">Type Racer</a> |
-                <a href="" class="navbar-link">About</a>
-            </div>
-            <div class="about">
-                <a href="About"></a>
-            </div>
-        </div>
-        <section id="keyboard-container" class="is-flex is-column">
-            <div id="top-row" class="is-flex">
-                <div id="Escape" class="key">esc</div>
-                <div class="funcKeys-container is-flex">
-                    <div class="key" id="F1">F1</div>
-                    <div class="key" id="F2">F2</div>
-                    <div class="key" id="F3">F3</div>
-                    <div class="key" id="F4">F4</div>
-                </div>
-                <div class="funcKeys-container is-flex">
-                    <div class="key" id="F5">F5</div>
-                    <div class="key" id="F6">F6</div>
-                    <div class="key" id="F7">F7</div>
-                    <div class="key" id="F8">F8</div>
-                </div>
-                <div class="funcKeys-container is-flex">
-                    <div class="key" id="F9">F9</div>
-                    <div class="key" id="F10">F10</div>
-                    <div class="key" id="F11">F11</div>
-                    <div class="key" id="F12">F12</div>
-                </div>
-                <div class="sysConKeys-container is-flex">
-                    <div class="key" id="PrintScreen">print/scr</div>
-                    <div class="key" id="ScrollLock">scroll lock</div>
-                    <div class="key" id="Pause">pause break</div>
-                </div>
-            </div>
-
-            <div id="bottom-container" class="is-flex">
-                <div id="left-container" class="is-flex is-column">
-                    <div class="row is-flex">
-                        <div class="key" id="Backquote">~</div>
-                        <div class="key" id="Digit1">1</div>
-                        <div class="key" id="Digit2">2</div>
-                        <div class="key" id="Digit3">3</div>
-                        <div class="key" id="Digit4">4</div>
-                        <div class="key" id="Digit5">5</div>
-                        <div class="key" id="Digit6">6</div>
-                        <div class="key" id="Digit7">7</div>
-                        <div class="key" id="Digit8">8</div>
-                        <div class="key" id="Digit9">9</div>
-                        <div class="key" id="Digit0">0</div>
-                        <div class="key" id="Minus">-</div>
-                        <div class="key" id="Equal">=</div>
-                        <div class="key" id="Backspace">del</div>
+            <div class="side-menu">
+                <a href="/games">
+                    <div class="game-button link-button">
+                        Mini Games
                     </div>
-                    <div class="row is-flex">
-                        <div class="key" id="Tab">Tab</div>
-                        <div class="key" id="KeyQ">Q</div>
-                        <div class="key" id="KeyW">W</div>
-                        <div class="key" id="KeyE">E</div>
-                        <div class="key" id="KeyR">R</div>
-                        <div class="key" id="KeyT">T</div>
-                        <div class="key" id="KeyY">Y</div>
-                        <div class="key" id="KeyU">U</div>
-                        <div class="key" id="KeyI">I</div>
-                        <div class="key" id="KeyO">O</div>
-                        <div class="key" id="KeyP">P</div>
-                        <div class="key" id="BracketLeft">[</div>
-                        <div class="key" id="BracketRight">]</div>
-                        <div class="key" id="Backslash">\</div>
+                </a>
+                <a href="https://github.com/Renzoki/qwerty.">
+                    <div class="github-button link-button">
+                        Github Repo
                     </div>
-                    <div class="row is-flex">
-                        <div class="key" id="CapsLock">CapsLock</div>
-                        <div class="key" id="KeyA">A</div>
-                        <div class="key" id="KeyS">S</div>
-                        <div class="key" id="KeyD">D</div>
-                        <div class="key" id="KeyF">F</div>
-                        <div class="key" id="KeyG">G</div>
-                        <div class="key" id="KeyH">H</div>
-                        <div class="key" id="KeyJ">J</div>
-                        <div class="key" id="KeyK">K</div>
-                        <div class="key" id="KeyL">L</div>
-                        <div class="key" id="Semicolon">;</div>
-                        <div class="key" id="Quote">'</div>
-                        <div class="key" id="Enter">Enter</div>
-                    </div>
-                    <div class="row is-flex">
-                        <div class="key" id="ShiftLeft">Shift</div>
-                        <div class="key" id="KeyZ">Z</div>
-                        <div class="key" id="KeyX">X</div>
-                        <div class="key" id="KeyC">C</div>
-                        <div class="key" id="KeyV">V</div>
-                        <div class="key" id="KeyB">B</div>
-                        <div class="key" id="KeyN">N</div>
-                        <div class="key" id="KeyM">M</div>
-                        <div class="key" id="Comma">,</div>
-                        <div class="key" id="Period">.</div>
-                        <div class="key" id="Slash">/</div>
-                        <div class="key" id="ShiftRight">Shift</div>
-                    </div>
-                    <div class="row is-flex">
-                        <div class="key" id="ControlLeft">Ctrl</div>
-                        <div class="key" id="MetaLeft">Win</div>
-                        <div class="key" id="AltLeft">Alt</div>
-                        <div class="key" id="Space">Space</div>
-                        <div class="key" id="AltRight">Alt</div>
-                        <div class="key" id="MetaRight">Win</div>
-                        <div class="key" id="ContextMenu">Menu</div>
-                        <div class="key" id="ControlRight">Ctrl</div>
-                    </div>
-                </div>
-                <div id="navKeys-container" class="is-flex is-column">
-                    <div class="navKeys is-flex is-column">
-                        <div class="row is-flex">
-                            <div class="key" id="Insert">insert</div>
-                            <div class="key" id="Home">home</div>
-                            <div class="key" id="PageUp">page up</div>
-                        </div>
-                        <div class="row is-flex">
-                            <div class="key" id="Delete">delete</div>
-                            <div class="key" id="End">end</div>
-                            <div class="key" id="PageDown">page down</div>
-                        </div>
-                    </div>
-                    <div class="arrowKeys is-column">
-                        <div class="row is-flex row1">
-                            <div class="key" id="ArrowUp">&uarr;</div>
-                        </div>
-                        <div class="row is-flex row2">
-                            <div class="key" id="ArrowLeft">&larr;</div>
-                            <div class="key" id="ArrowDown">&darr;</div>
-                            <div class="key" id="ArrowRight">&rarr;</div>
-                        </div>
-                    </div>
-                </div>
-                <div id="right-container" class="is-flex">
-                    <div class="numberKeys is-flex is-column">
-                        <div class="row is-flex">
-                            <div class="key" id="NumLock">num lock</div>
-                            <div class="key" id="NumpadDivide">/</div>
-                            <div class="key" id="NumpadMultiply">*</div>
-                        </div>
-                        <div class="row is-flex">
-                            <div class="key" id="Numpad7">7</div>
-                            <div class="key" id="Numpad8">8</div>
-                            <div class="key" id="Numpad9">9</div>
-                        </div>
-                        <div class="row is-flex">
-                            <div class="key" id="Numpad4">4</div>
-                            <div class="key" id="Numpad5">5</div>
-                            <div class="key" id="Numpad6">6</div>
-                        </div>
-                        <div class="row is-flex">
-                            <div class="key" id="Numpad1">1</div>
-                            <div class="key" id="Numpad2">2</div>
-                            <div class="key" id="Numpad3">3</div>
-                        </div>
-                        <div class="row is-flex">
-                            <div class="key" id="Numpad0">0</div>
-                            <div class="key" id="NumpadDecimal">.</div>
-                        </div>
-                    </div>
-                    <div class="operationKeys">
-                        <div class="is-column is-flex">
-                            <div class="key" id="NumpadSubtract">-</div>
-                            <div class="key" id="NumpadAdd">+</div>
-                            <div class="key" id="NumpadEnter">enter</div>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
         </section>
+        <%- include('partials/keyboard'); %>
+        <div class="background-container"></div>
     </div>
 </body>
+
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="js/keydown.js"></script>
+<script src="/js/keydown.js"></script>
 
 </html>

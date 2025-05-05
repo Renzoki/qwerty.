@@ -2,8 +2,6 @@ const body = document.querySelector("body")
 const title = document.querySelector("#title")
 const textCursor = document.querySelector("#textCursor")
 
-let keyIDs = []
-
 class keyObject {
     constructor(code) {
         this.code = code
@@ -13,9 +11,9 @@ class keyObject {
 
 async function getKeys() {
     try {
-        await axios.get('/getKeys')
+        await axios.get('/keys/get')
         .then(function (response) {
-            keyIDs = response.data.keys
+            let keyIDs = response.data.keys
 
             const keyObjectArr = keyIDs.map((obj) => {
                 return new keyObject(obj.code)
@@ -42,7 +40,6 @@ function generateKeyListeners(objArr) {
         body.addEventListener("keyup", (e) => {
             if (e.code === obj.code) {
                 obj.element.classList.remove("is-pressed")
-                enqueueCharacter(e.key[0])
             }
         })
     });

@@ -1,0 +1,88 @@
+:root {
+    --keyBorderColor: #393e41;
+    --backgroundColor: #f6f7eb;
+    --keyPressColor: #e94f37;
+}
+
+body {
+    margin: 0;
+    font-family: Martian Mono;
+    text-decoration: none;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: .4s ease-in-out;
+    background-color: var(--backgroundColor);
+}
+
+.background-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-repeat: repeat;
+    background-image: url(../assets/grid-background.png);
+    opacity: 0.15;
+}
+
+#back-button {
+    z-index: 2;
+    transition: .3s ease-in-out transform;
+    transform: translateX(-43vw) translateY(-15vh);
+}
+
+#back-button:hover {
+    transform: translateX(-43vw) translateY(-16vh);
+}
+
+.back-button {
+    width: 3.2em;
+    color: var(--keyBorderColor);
+    border: 2px solid var(--keyBorderColor);
+    box-shadow: 5px 5px var(--keyBorderColor);
+    background-color: var(--backgroundColor);
+    text-align: center;
+    padding: .2em;
+    border-radius: .2em;
+    transition: .3s transform ease-in-out;
+    margin: 0;
+    z-index: 1000;
+}
+
+#back-button a {
+    font-size: 2em;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+
+#games-container {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#selection-container {
+    width: 450px;
+    height: 420px;
+    padding: 15px;
+    border-radius: 1em;
+    font-family: basic;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    border: 2px solid var(--keyBorderColor);
+    box-shadow: 5px 7px var(--keyBorderColor);
+    background-color: var(--backgroundColor);
+    transition: .2s transform ease-in-out;
+    z-index: 1;
+}
+
+#selection-container:hover {
+    transform: translateY(-10px);
+}

@@ -8,14 +8,17 @@ app.use(express.static("public"))
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "/views"))
 
-app.get("/getKeys", (req, res) => {
+app.get("/keys/get", (req, res) => {
     const keys = require("./keys.json")
-    console.log(keys)
     res.send(keys)
 })
 
-app.get("/testKeys", (req, res) => {
-    res.render("keyTest", { keyboardTester: true})
+app.get("/", (req, res) => {
+    res.render("keyTest")
+})
+
+app.get("/games", (req, res) => {
+    res.render("gamesMenu")
 })
 
 app.listen(PORT, () => {

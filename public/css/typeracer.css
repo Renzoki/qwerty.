@@ -1,0 +1,74 @@
+:root {
+    --keyBorderColor: #393e41;
+    --backgroundColor: #f6f7eb;
+    --keyPressColor: #e94f37;
+}
+
+body {
+    margin: 0;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    transition: .4s ease-in-out;
+    background-color: var(--backgroundColor);
+    overflow: auto;
+}
+
+.background-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-repeat: repeat;
+    background-image: url(../assets/grid-background.png);
+    opacity: 0.15;
+}
+
+#title-container {
+    z-index: 10;
+    display: flex;
+    width: 1300px;
+    height: 137px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    font-family: Martian Mono;
+    justify-content: space-between;
+    animation: 1s ease-out 0s 1 becomeClear;
+}
+
+#type-here-container {
+    margin: 0;
+    font-size: 2em;
+    color: var(--keyBorderColor);
+    display: flex;
+    flex-wrap: wrap;
+    word-break: keep-all;
+}
+
+#title-container #type-here-container .not-pressed {
+    color: rgb(153, 144, 144);
+}
+
+#title-container #type-here-container .next {
+    color: var(--keyPressColor)
+}
+
+.back-button {
+    width: 2.5em;
+    transform: translateX(-47vw) translateY(-45vh);
+    position: fixed;
+    transition: .2s transform;
+    z-index: 10;
+}
+
+.back-button:hover {
+    transform: translateX(-47vw) translateY(-45.5vh);
+}
+
+.back-link {
+    z-index: 10;
+    position: absolute;
+}

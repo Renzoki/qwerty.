@@ -17,8 +17,8 @@ app.get("/", (req, res) => {
     res.render("keyTest")
 })
 
-app.get("/games", (req, res) => {
-    res.render("gamesMenu")
+app.get("/typeracer", (req, res) => {
+    res.render("typeracer")
 })
 
 app.listen(PORT, () => {

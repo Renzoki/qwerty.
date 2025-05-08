@@ -11,7 +11,7 @@
         { "code": "Digit5", "label": "5" }, { "code": "Digit6", "label": "6" }, { "code": "Digit7", "label": "7" }, { "code": "Digit8", "label": "8" },
         { "code": "Digit9", "label": "9" }, { "code": "Digit0", "label": "0" },
         { "code": "Minus", "label": "-" }, { "code": "Equal", "label": "=" },
-        { "code": "Delete", "label": "del" },
+        { "code": "Backspace", "label": "del" },
     
         { "code": "Tab", "label": "Tab" },
         { "code": "KeyQ", "label": "Q" }, { "code": "KeyW", "label": "W" }, { "code": "KeyE", "label": "E" }, { "code": "KeyR", "label": "R" },

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Basic&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/keyboard.css">
+    <link rel="stylesheet" href="/css/typeracer.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="/js/typeracer.js"></script>
+    <title>qwerty.</title>
+</head>
+
+<body>
+    <div id="container" class="is-flex is-column">
+        <a class="back-link" href="/"> 
+            <img class="back-button" src="assets/back-arrow-black.png" alt="">
+        </a>
+        <section id="title-container">
+
+        </section>
+        <%- include('partials/keyboard'); %>
+            <div class="background-container"></div>
+    </div>
+</body>
+
+</html>

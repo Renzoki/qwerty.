@@ -58,14 +58,14 @@ body {
 
 .back-button {
     width: 2.5em;
-    transform: translateX(-47vw) translateY(-45vh);
+    transform: translateX(-48vw) translateY(-46vh);
     position: fixed;
     transition: .2s transform;
     z-index: 10;
 }
 
 .back-button:hover {
-    transform: translateX(-47vw) translateY(-45.5vh);
+    transform: translateX(-48vw) translateY(-46.5vh);
 }
 
 .back-link {

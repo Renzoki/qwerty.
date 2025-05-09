@@ -48,34 +48,6 @@ function generateKeyListeners(objArr) {
     });
 }
 
-getKeys()
-
-/*=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-
-const titleContainer = document.querySelector("#title-container")
-
-function generateTextElements(String) {
-    const textContainer = document.createElement("div")
-    textContainer.id = "type-here-container"
-
-    for (let i = 0; i < String.length; i++) {
-
-        const span = document.createElement("span")
-        span.textContent = String[i]
-
-        if (String[i] === " ") {
-            span.innerHTML = "&nbsp;"
-            span.classList.add("Space")
-        }
-
-        span.classList.add("not-pressed")
-        textContainer.append(span)
-    }
-
-    return textContainer
-}
-
-/*=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
 function checkIfPressed(pressedChar) {
     try {
@@ -91,15 +63,59 @@ function checkIfPressed(pressedChar) {
         nextChar.classList.add("next")
 
     } catch (e) {
-        titleContainer.innerHTML = ""
+        typeHereContainer.innerHTML = ""
         getFillerParagraph()
     }
 }
 
+getKeys()
+
+/*=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+const typeHereContainer = document.querySelector("#type-here-container")
+const textCursor = document.querySelector("#text-cursor")
+
+function generateTextElements(String) {
+    let spanArray = []
+
+    for (let i = 0; i < String.length; i++) {
+        const span = document.createElement("span")
+        span.textContent = String[i]
+
+        if (String[i] === " ") {
+            span.innerHTML = "&nbsp;"
+            span.classList.add("Space")
+        }
+
+        span.classList.add("not-pressed")
+        spanArray.push(span)
+    }
+
+    return spanArray
+}
+
+function beginTypeAnimation(titleContainer, spanArray) {
+    const totalTime = (spanArray.length * 50)
+    let i = 0
+
+    const intervalID = setInterval(() => {
+        if (spanArray[i]) {
+            titleContainer.append(spanArray[i])
+            i++
+        }
+    }, 10)
+
+    setTimeout(() => {
+        clearInterval(intervalID)
+    }, totalTime)
+}
+
+/*=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
 async function getFillerParagraph() {
     axios.get("https://baconipsum.com/api/?type=meat-and-filler&sentences=2")
-        .then((res) => { return generateTextElements(res.data[0]) })
-        .then((container) => { titleContainer.append(container) })
+        .then(res => { return generateTextElements(res.data[0]) })
+        .then(res => { beginTypeAnimation(typeHereContainer, res) })
 }
 
 getFillerParagraph()

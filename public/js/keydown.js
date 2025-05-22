@@ -33,7 +33,6 @@ function generateKeyListeners(objArr) {
     objArr.forEach(obj => {
         body.addEventListener("keydown", (e) => {
             if (e.code === obj.code) {
-                console.log(e.code)
                 obj.element.classList.add("is-pressed")
             }
         })
